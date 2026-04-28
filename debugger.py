@@ -21,7 +21,7 @@ with st.sidebar:
     
     
 
-PIL_images = []
+    PIL_images = []
     if images:
         #converting Streamlit img to PIL image
         for img in images:
