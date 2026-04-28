@@ -1,5 +1,5 @@
 #video 7.3
-
+from google.genai import types
 import streamlit as st
 from api_calling_for_debugger import debug_generator
 from PIL import Image
