@@ -18,7 +18,12 @@ client = genai.Client(api_key=api_key)
 #note generator
 def debug_generator(images, selected_option):
 
-    prompt = f"""Uploaded pictures are the screenshots of bug in program, given the user. now give {selected_option} in proper way"""
+    prompt = f"""You are a debugging assistant.The user uploaded screenshots of a buggy program.
+    Task:
+    - Analyze the error
+    - Explain clearly
+    - Provide {selected_option}
+    Keep it concise and structured."""
 
     response = client.models.generate_content(
         model = "gemini-3-flash-preview",
