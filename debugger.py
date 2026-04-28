@@ -25,8 +25,8 @@ with st.sidebar:
     if images:
         #converting Streamlit img to PIL image
         for img in images:
-            pil_img = Image.open(img)
-            PIL_images.append(pil_img)
+            parts.append(types.Part.from_image(img))
+        parts.append(types.Part.from_text(prompt))
         if(len(images)>3):
             st.error("Upload at max 3 images")
         else:
