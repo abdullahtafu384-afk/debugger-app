@@ -21,9 +21,9 @@ with st.sidebar:
     
     
 
-
+PIL_images = []
     if images:
-        PIL_images = []#converting Streamlit img to PIL image
+        #converting Streamlit img to PIL image
         for img in images:
             pil_img = Image.open(img)
             PIL_images.append(pil_img)
